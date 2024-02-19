@@ -1,6 +1,7 @@
 //1480. running-sum-of-1d-array
 
 class Solution {
+//Fun problem!
 public:
     vector<int> runningSum(vector<int>& nums) {
         int total=0;
