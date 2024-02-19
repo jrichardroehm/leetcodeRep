@@ -1,0 +1,14 @@
+//Great practice with vector methods.
+
+class Solution {
+public:
+    int maximumWealth(vector<vector<int>>& accounts) {
+        int maxAccount = 0;
+        vector<int> customerAccounts;
+        //int numCustomers = accounts.size();
+        for(int i = 0; i < accounts.size();++i){
+            customerAccounts.push_back(std::accumulate(accounts[i].begin(),accounts[i].end(),0));
+        }
+        return *max_element(customerAccounts.begin(),customerAccounts.end());
+    }
+};
